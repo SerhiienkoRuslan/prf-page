@@ -1,10 +1,10 @@
-import { FC, memo, useContext, useState } from 'react'
+import { FC, memo, useState } from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
-import { GlobalContext } from '../../../../../context/GlobalContext'
-import useTheme from '../../../../../hooks/useTheme'
-import GalleryModal from '../../../../../components/GalleryModal'
+import { useGlobal } from '@/context/GlobalContext'
+import useTheme from '@/hooks/useTheme'
+import GalleryModal from '@/components/GalleryModal'
 
 import styles from './styles.module.scss'
 
@@ -37,7 +37,7 @@ const responsive = {
 }
 
 const ProjectCarousel: FC<ProjectCarouselType> = ({ gallery, name }) => {
-  const { theme } = useContext(GlobalContext)
+  const { theme } = useGlobal()
   const { addTheme } = useTheme(theme, styles.light)
   const [modalUrl, setModalUrl] = useState('')
 
