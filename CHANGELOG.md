@@ -1,5 +1,11 @@
 # prf-page
 
+## 1.0.3
+
+### Patch Changes
+
+- 1a7668c: GalleryModal img fix
+
 ## 1.0.0
 
 ### Major Changes
