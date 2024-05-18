@@ -81,11 +81,23 @@ importers:
         specifier: ^1.61.0
         version: 1.77.2
     devDependencies:
+      '@babel/cli':
+        specifier: ^7.12.10
+        version: 7.24.5(@babel/core@7.24.5)
+      '@babel/core':
+        specifier: ^7.12.10
+        version: 7.24.5
       '@babel/eslint-plugin':
         specifier: ^7.19.1
         version: 7.24.5(@babel/eslint-parser@7.24.5(@babel/core@7.24.5)(eslint@8.57.0))(eslint@8.57.0)
+      '@babel/plugin-transform-runtime':
+        specifier: ^7.12.10
+        version: 7.24.3(@babel/core@7.24.5)
+      '@babel/preset-env':
+        specifier: ^7.12.11
+        version: 7.24.5(@babel/core@7.24.5)
       '@babel/preset-react':
-        specifier: ^7.12.13
+        specifier: ^7.12.10
         version: 7.24.1(@babel/core@7.24.5)
       '@babel/preset-typescript':
         specifier: ^7.13.0
@@ -99,6 +111,12 @@ importers:
       babel-eslint:
         specifier: ^10.1.0
         version: 10.1.0(eslint@8.57.0)
+      babel-loader:
+        specifier: ^8.2.2
+        version: 8.3.0(@babel/core@7.24.5)(webpack@5.91.0(esbuild@0.17.19)(webpack-cli@5.1.4(webpack-dev-server@4.15.2)(webpack@5.91.0)))
+      babel-plugin-istanbul:
+        specifier: ^6.1.1
+        version: 6.1.1
       babel-plugin-module-resolver:
         specifier: ^4.1.0
         version: 4.1.0
@@ -169,6 +187,13 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       ajv: '>=8'
+
+  '@babel/cli@7.24.5':
+    resolution: {integrity: sha512-2qg1mYtJRsOOWF6IUwLP5jI42P8Cc0hQ5TmnjLrik/4DKouO8dFJN80HEz81VmVeUs97yuuf3vQ/9j7Elrcjlg==}
+    engines: {node: '>=6.9.0'}
+    hasBin: true
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
 
   '@babel/code-frame@7.24.2':
     resolution: {integrity: sha512-y5+tLQyV8pg3fsiln67BVLD1P13Eg4lh5RW9mF0zUuvLrv9uIQ4MCL+CRT+FTsBlBjcIan6PGsLcBN0m3ClUyQ==}
@@ -1484,6 +1509,9 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  '@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3':
+    resolution: {integrity: sha512-s88O1aVtXftvp5bCPB7WnmXc5IwOZZ7YPuwNPt+GtOOXpPvad1LfbmjYv+qII7zP6RU2QGnqve27dnLycEnyEQ==}
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
@@ -3510,6 +3538,9 @@ packages:
   fs-monkey@1.0.6:
     resolution: {integrity: sha512-b1FMfwetIKymC0eioW7mTywihSQE4oLzQn1dB6rZB5fx/3NpNEdAWeCSMB+60/AeT0TCXsxzAlcYVEFCTAksWg==}
 
+  fs-readdir-recursive@1.1.0:
+    resolution: {integrity: sha512-GNanXlVr2pf02+sPN40XN8HG+ePaNcvM0q5mZBd668Obwb0yD5GiUbZOFgwn8kGMY6I3mdyDJzieUy3PTYyTRA==}
+
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
@@ -4433,6 +4464,10 @@ packages:
 
   magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
+
+  make-dir@2.1.0:
+    resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}
+    engines: {node: '>=6'}
 
   make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
@@ -5793,6 +5828,10 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
+  slash@2.0.0:
+    resolution: {integrity: sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==}
+    engines: {node: '>=6'}
+
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
@@ -6685,6 +6724,20 @@ snapshots:
       json-schema: 0.4.0
       jsonpointer: 5.0.1
       leven: 3.1.0
+
+  '@babel/cli@7.24.5(@babel/core@7.24.5)':
+    dependencies:
+      '@babel/core': 7.24.5
+      '@jridgewell/trace-mapping': 0.3.25
+      commander: 4.1.1
+      convert-source-map: 2.0.0
+      fs-readdir-recursive: 1.1.0
+      glob: 7.2.3
+      make-dir: 2.1.0
+      slash: 2.0.0
+    optionalDependencies:
+      '@nicolo-ribaudo/chokidar-2': 2.1.8-no-fsevents.3
+      chokidar: 3.6.0
 
   '@babel/code-frame@7.24.2':
     dependencies:
@@ -8312,6 +8365,9 @@ snapshots:
       react-is: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.2
+
+  '@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3':
+    optional: true
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     dependencies:
@@ -10739,6 +10795,8 @@ snapshots:
 
   fs-monkey@1.0.6: {}
 
+  fs-readdir-recursive@1.1.0: {}
+
   fs.realpath@1.0.0: {}
 
   fsevents@2.3.3:
@@ -11897,6 +11955,11 @@ snapshots:
   magic-string@0.25.9:
     dependencies:
       sourcemap-codec: 1.4.8
+
+  make-dir@2.1.0:
+    dependencies:
+      pify: 4.0.1
+      semver: 5.7.2
 
   make-dir@3.1.0:
     dependencies:
@@ -13342,6 +13405,8 @@ snapshots:
   signal-exit@4.1.0: {}
 
   sisteransi@1.0.5: {}
+
+  slash@2.0.0: {}
 
   slash@3.0.0: {}
 
