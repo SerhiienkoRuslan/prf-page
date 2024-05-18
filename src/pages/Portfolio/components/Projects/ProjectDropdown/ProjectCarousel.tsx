@@ -2,9 +2,9 @@ import { FC, memo, useContext, useState } from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
-import { GlobalContext } from '../../../../context/GlobalContext'
-import useTheme from '../../../../hooks/useTheme'
-import GalleryModal from '../../../../components/GalleryModal'
+import { GlobalContext } from '../../../../../context/GlobalContext'
+import useTheme from '../../../../../hooks/useTheme'
+import GalleryModal from '../../../../../components/GalleryModal'
 
 import styles from './styles.module.scss'
 

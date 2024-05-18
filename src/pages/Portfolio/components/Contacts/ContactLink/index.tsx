@@ -1,7 +1,7 @@
-import { useContext } from 'react'
-import { GlobalContext } from '../../../../context/GlobalContext'
+import { useGlobal } from '@/context/GlobalContext'
+import useTheme from '@/hooks/useTheme'
+
 import styles from './ContactLink.module.scss'
-import useTheme from '../../../../hooks/useTheme'
 
 interface PropsType {
   link: string
@@ -10,8 +10,7 @@ interface PropsType {
 }
 
 const ContactLink = ({ link, logo, alt }: PropsType) => {
-  const { theme } = useContext(GlobalContext)
-
+  const { theme } = useGlobal()
   const { addTheme } = useTheme(theme, styles.light)
 
   return (

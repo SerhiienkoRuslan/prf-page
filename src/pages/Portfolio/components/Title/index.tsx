@@ -1,14 +1,12 @@
-import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
-import { GlobalContext } from '@/context/GlobalContext'
+import { useGlobal } from '@/context/GlobalContext'
 import useTheme from '@/hooks/useTheme'
 
 import Avatar from '@/../assets/avatar.jpg'
 import Download from '@/../assets/download.svg'
 
-import Resume from './CV_RuslanSerhiienko.pdf'
 import styles from './Title.module.scss'
 
 const divVariants = {
@@ -24,7 +22,7 @@ const divVariants = {
 
 const Title = () => {
   const { t } = useTranslation()
-  const { theme } = useContext(GlobalContext)
+  const { theme, content } = useGlobal()
   const { addTheme } = useTheme(theme, styles.light)
 
   return (
@@ -41,20 +39,22 @@ const Title = () => {
         </div>
 
         <div className={styles.name}>
-          <h2 className={addTheme(styles.nameItem)}>{t('home.name')}</h2>
-          <p className={addTheme(styles.profession)}>{t('home.profession')}</p>
+          <h2 className={addTheme(styles.nameItem)}>{content.name}</h2>
+          <p className={addTheme(styles.profession)}>{content.title}</p>
         </div>
       </div>
 
       {/* TODO: need refactor */}
-      <a href={Resume} target='_blank' rel='noreferrer' download='resume.pdf'>
-        <button className={styles.button}>
-          <div className={styles.downloadButton}>
-            <p>{t('home.download')}</p>
-            <img src={Download} alt='download' />
-          </div>
-        </button>
-      </a>
+      {content.cvFile && (
+        <a href={content.cvFile} target='_blank' rel='noreferrer' download='resume.pdf'>
+          <button className={styles.button}>
+            <div className={styles.downloadButton}>
+              <p>{t('home.download')}</p>
+              <img src={Download} alt='download' />
+            </div>
+          </button>
+        </a>
+      )}
     </motion.div>
   )
 }

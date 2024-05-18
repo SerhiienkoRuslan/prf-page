@@ -1,32 +1,24 @@
-import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { GlobalContext } from '../../../../context/GlobalContext'
-import useTheme from '../../../../hooks/useTheme'
+import { Project, useGlobal } from '@/context/GlobalContext'
+import useTheme from '@/hooks/useTheme'
+import DropdownBox from '@/components/DropdownBox'
+
 import GitButton_light from '@/../assets/gitButton-light.svg'
 import GitButton_dark from '@/../assets/gitButton-dark.svg'
-import DropdownBox from '../../../../components/DropdownBox/DropdownBox'
 
 import ProjectCarousel from './ProjectCarousel'
 import styles from './styles.module.scss'
 
 type PropsType = {
-  projectInfo: {
-    technologies: string[]
-    name: string
-    desc: string
-    codeLink?: string
-    demoLink?: string
-    gallery?: string[]
-    video?: string
-  }
+  projectInfo: Project
   number: string
 }
 
 const ProjectDropdown = ({ projectInfo, number }: PropsType) => {
   const { technologies, name, desc, codeLink, demoLink, gallery, video } = projectInfo
   const { t } = useTranslation()
-  const { theme } = useContext(GlobalContext)
+  const { theme } = useGlobal()
   const { addTheme } = useTheme(theme, styles.light)
 
   return (

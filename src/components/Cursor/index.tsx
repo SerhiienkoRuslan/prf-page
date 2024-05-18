@@ -1,5 +1,5 @@
 import React, { HTMLAttributes, useCallback, useContext, useEffect, useRef, useState } from 'react'
-import { GlobalContext } from '../../context/GlobalContext'
+import { GlobalContext } from '@/context/GlobalContext'
 
 interface StylesType {
   [key: string]: HTMLAttributes<HTMLDivElement>['style']
@@ -31,7 +31,13 @@ function useEventListener(eventName: string, handler: any, element = document) {
   }, [eventName, element])
 }
 
-const AnimatedCursor = ({ outerAlpha = 0.4, innerSize = 8, outerSize = 8, outerScale = 5, innerScale = 0.7 }) => {
+const AnimatedCursorComponent = ({
+  outerAlpha = 0.4,
+  innerSize = 8,
+  outerSize = 8,
+  outerScale = 5,
+  innerScale = 0.7,
+}) => {
   const { theme } = useContext(GlobalContext)
 
   const cursorOuterRef = useRef<HTMLDivElement>(null)
@@ -113,7 +119,7 @@ const AnimatedCursor = ({ outerAlpha = 0.4, innerSize = 8, outerSize = 8, outerS
 
   useEffect(() => {
     const clickables = document.querySelectorAll<HTMLElement>(
-      'a, input[type="submit"], input[type="image"], div[data-atr="summary"], button[data-atr="closeButton"], label[for], select, button, .link, .carouselImage'
+      'a, input[type="submit"], input[type="image"], div[constants-atr="summary"], button[constants-atr="closeButton"], label[for], select, button, .link, .carouselImage'
     )
     clickables.forEach((el) => {
       el.style.cursor = 'none'
@@ -198,6 +204,16 @@ const AnimatedCursor = ({ outerAlpha = 0.4, innerSize = 8, outerSize = 8, outerS
       <div ref={cursorInnerRef} style={styles.cursorInner} />
     </>
   )
+}
+
+const AnimatedCursor = () => {
+  const isNotMobile = window.innerWidth >= 768
+
+  if (isNotMobile) {
+    return <AnimatedCursorComponent />
+  }
+
+  return null
 }
 
 export default AnimatedCursor

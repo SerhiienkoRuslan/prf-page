@@ -1,8 +1,5 @@
 {
   "home": {
-    "name": "Ruslan Serhiienko",
-    "profession": "Front-end | React developer",
-    "desc": "Creative Front-end developer offering 8+ years of experience providing high-impact web solutions for diverse industry organizations. Skilled in developing and designing multiple web-based applications incorporating a range of technologies. Aspiring to combine broad background with strong technical skills to excel as a Front-End Developer.",
     "download": "Download CV",
     "contact": "Contacts",
     "copy": "Copy",
@@ -11,20 +8,15 @@
     "project": "Projects",
     "projects": "View projects",
     "skills": "Skills and Techstack",
-    "edu": "Education",
-    "univ": "Ukrainian state university of railway transport, Kharkiv",
-    "lang": "Languages",
-    "uk": "Ukrainian",
-    "en": "English (upper-intermediate level)"
+    "education": "Education",
+    "language": "Languages"
   },
   "project": {
     "description": "Description",
     "technology": "Technologies used",
     "code": "View code",
     "demo": "Try Demo",
-    "more_info": "More info",
-    "description_exchange_rate": "Exchange Rate Tracker provides real-time exchange rates for various currencies, historical data analysis, and a currency conversion calculator. Its user-friendly interface, powered by React, ensures easy navigation and efficient currency tracking.",
-    "description_weather_widget": "Weather Widget is a user-friendly app delivering real-time weather updates with customizable locations, hourly and daily forecasts, and weather alerts. Its intuitive interface, powered by React, ensures easy navigation and accessibility. Integrated with popular weather APIs, it provides accurate data."
+    "more_info": "More info"
   },
   "about": "About",
   "modal_contact": "Contact me",

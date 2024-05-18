@@ -1,8 +1,8 @@
-import { GlobalContext } from '../../../../context/GlobalContext'
-import { useContext } from 'react'
-import useTheme from '../../../../hooks/useTheme'
+import { useGlobal } from '@/context/GlobalContext'
+import useTheme from '@/hooks/useTheme'
+import DropdownBox from '@/components/DropdownBox'
+
 import styles from './AboutDropdown.module.scss'
-import DropdownBox from '../../../../components/DropdownBox/DropdownBox'
 
 interface PropsType {
   number: string
@@ -11,8 +11,7 @@ interface PropsType {
 }
 
 const AboutDropdown = ({ number, name, content }: PropsType) => {
-  const { theme } = useContext(GlobalContext)
-
+  const { theme } = useGlobal()
   const { addTheme } = useTheme(theme, styles.light)
 
   return (

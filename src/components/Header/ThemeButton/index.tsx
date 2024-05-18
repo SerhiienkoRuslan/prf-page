@@ -1,13 +1,13 @@
-import { useContext } from 'react'
+import { useGlobal } from '@/context/GlobalContext'
+import useTheme from '@/hooks/useTheme'
+
+import Theme_light from '../../../../assets/theme-light.svg'
+import Theme_dark from '../../../../assets/theme-dark.svg'
+
 import styles from './ThemeButton.module.scss'
-import { GlobalContext } from '../../context/GlobalContext'
-import useTheme from '../../hooks/useTheme'
-import Theme_light from '@/../assets/theme-light.svg'
-import Theme_dark from '@/../assets/theme-dark.svg'
 
 const ThemeButton = () => {
-  const { changeTheme, theme } = useContext(GlobalContext)
-
+  const { changeTheme, theme } = useGlobal()
   const { addTheme } = useTheme(theme, styles.light)
 
   return (

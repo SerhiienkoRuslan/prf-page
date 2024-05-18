@@ -1,6 +1,5 @@
-import { useContext } from 'react'
-
-import { GlobalContextProvider, GlobalContext } from './context/GlobalContext'
+import { useEffect } from 'react'
+import { GlobalContextProvider, useGlobal } from './context/GlobalContext'
 import Portfolio from './pages/Portfolio'
 
 import Header from './components/Header'
@@ -9,14 +8,19 @@ import AnimatedCursor from './components/Cursor'
 import './i18next'
 import './App.css'
 
-const AppComponent = () => {
-  const { theme } = useContext(GlobalContext)
+const AppComponent = (appContent: any) => {
+  const { theme, setContent } = useGlobal()
 
-  const isNotMobile = window.innerWidth >= 768
+  useEffect(() => {
+    if (appContent) {
+      setContent(appContent)
+    }
+  }, [appContent])
 
   return (
     <div className='App' style={{ background: theme ? '#fff' : '#0c151d' }}>
-      {isNotMobile && <AnimatedCursor />}
+      <AnimatedCursor />
+
       <div className='appWrapper'>
         <Header />
         <Portfolio />
@@ -25,10 +29,10 @@ const AppComponent = () => {
   )
 }
 
-const App = () => {
+const App = (appContent: any) => {
   return (
     <GlobalContextProvider>
-      <AppComponent />
+      <AppComponent appContent={appContent} />
     </GlobalContextProvider>
   )
 }

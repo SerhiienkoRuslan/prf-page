@@ -1,13 +1,12 @@
-import { useContext } from 'react'
-import { GlobalContext } from '../../context/GlobalContext'
-import LanguagesSelector from '../LanguagesSelector'
-import ThemeButton from '../ThemeButton'
+import { useGlobal } from '@/context/GlobalContext'
+import useTheme from '@/hooks/useTheme'
+
+import LanguagesSelector from './LanguagesSelector'
+import ThemeButton from './ThemeButton'
 import styles from './Header.module.scss'
-import useTheme from '../../hooks/useTheme'
 
 const Header = () => {
-  const { theme } = useContext(GlobalContext)
-
+  const { theme } = useGlobal()
   const { addTheme } = useTheme(theme, styles.light)
 
   return (
@@ -15,6 +14,7 @@ const Header = () => {
       <div className={styles.item}>
         <ThemeButton />
       </div>
+
       <div className={styles.item}>
         <LanguagesSelector />
       </div>
