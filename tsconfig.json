@@ -1,17 +1,26 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "target": "es2022",
-    "verbatimModuleSyntax": true,
     "allowJs": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
-    "module": "ESNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "noEmit": true,
-    "lib": ["es2022", "dom", "dom.iterable"],
-  }
+    "jsx": "react-jsx",
+    "moduleDetection": "force",
+    "noUncheckedIndexedAccess": true,
+    "module": "ESNext",
+    "lib": ["es2022", "dom", "dom.iterable"]
+  },
+  "include": ["./src", "./src/*.json", "./src/locales/*.json"]
 }

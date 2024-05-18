@@ -6,14 +6,92 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts",
+    "clean": "rm -rf ./dist",
+    "build:dev": "npm run clean && tsc && babel src -d ./dist --config-file ./babel.config.js --copy-files --extensions '.js,.jsx,.ts,.tsx'",
+    "build:watch": "npm run build:dev -- --watch",
+    "build": "NODE_ENV=production npm run build:dev",
     "release": "pnpm run build && changeset publish",
-    "lint": "tsc"
+    "lint": "eslint . --cache --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.12.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.23",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint-plugin-jest-dom": "^4.0.3",
+    "framer-motion": "^10.12.16",
+    "i18next": "^22.4.14",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
+    "react-modal-image": "^2.6.0",
+    "react-multi-carousel": "^2.8.4",
+    "react-scripts": "5.0.1",
+    "sass": "^1.61.0"
   },
   "devDependencies": {
+    "@babel/eslint-plugin": "^7.19.1",
+    "@babel/preset-typescript": "^7.13.0",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
     "@changesets/cli": "^2.26.0",
+    "@types/react-modal-image": "^2.6.3",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-istanbul": "^6.1.1",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-jest-dom": "^4.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "2.6.0",
+    "tsconfig-paths": "^4.2.0",
     "tsup": "^6.5.0",
-    "typescript": "^5.1.6"
+    "typescript": "^4.9.5",
+    "webpack-cli": "^5.1.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "publishConfig": {
     "access": "public"
