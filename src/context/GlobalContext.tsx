@@ -12,6 +12,7 @@ export type Project = {
 
 export type AppContent = {
   name: string
+  avatar: string
   description: string
   title: string
   cvFile: string
@@ -39,6 +40,7 @@ type GlobalContextProps = {
 
 const initialContent: AppContent = {
   name: '',
+  avatar: '',
   description: '',
   title: '',
   cvFile: '',

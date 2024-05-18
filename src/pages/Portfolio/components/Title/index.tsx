@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { useGlobal } from '@/context/GlobalContext'
 import useTheme from '@/hooks/useTheme'
 
-import Avatar from '@/../assets/avatar.jpg'
 import Download from '@/../assets/download.svg'
 
 import styles from './Title.module.scss'
@@ -35,7 +34,7 @@ const Title = () => {
     >
       <div className={styles.desc}>
         <div className={addTheme(styles.avatarWrapper)}>
-          <img className={styles.avatar} src={Avatar} alt='avatar' />
+          <img className={styles.avatar} src={content.avatar} alt='avatar' />
         </div>
 
         <div className={styles.name}>
