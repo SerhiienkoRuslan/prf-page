@@ -1,5 +1,11 @@
 # prf-page
 
+## 1.0.5
+
+### Patch Changes
+
+- f65d938: gallery fix
+
 ## 1.0.4
 
 ### Patch Changes
