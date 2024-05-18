@@ -1,5 +1,11 @@
 # prf-page
 
+## 1.1.0
+
+### Minor Changes
+
+- ec5f42c: Project fix
+
 ## 1.0.5
 
 ### Patch Changes
