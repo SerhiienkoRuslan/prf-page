@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import { GlobalContext } from '@/context/GlobalContext'
 import useTheme from '@/hooks/useTheme'
 
-import Avatar from '@/assets/avatar.jpg'
-import Download from '@/assets/download.svg'
+import Avatar from '../../../../assets/avatar.jpg'
+import Download from '../../../../assets/download.svg'
 
 import Resume from './CV_RuslanSerhiienko.pdf'
 import styles from './Title.module.scss'
