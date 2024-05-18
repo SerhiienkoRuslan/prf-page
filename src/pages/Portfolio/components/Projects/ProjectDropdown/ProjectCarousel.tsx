@@ -57,7 +57,7 @@ const ProjectCarousel: FC<ProjectCarouselType> = ({ gallery, name }) => {
               handleSetModalUrl(galleryUrl)
             }}
           >
-            <img className='carouselImage' src={require(`@/../assets/projectsImg/${galleryUrl}`)} alt='Project img' />
+            <img className='carouselImage' src={galleryUrl} alt='Project img' />
           </div>
         ))}
       </Carousel>
