@@ -70,7 +70,7 @@ const GalleryModal = ({ name, modalUrl, setModalUrl, gallery }: GalleryModalProp
           </div>
 
           <div className={styles.image}>
-            <img src={require(`@/../assets/projectsImg/${modalUrl}`)} alt='Project img' />
+            <img src={modalUrl} alt='Project img' />
           </div>
         </div>
 
