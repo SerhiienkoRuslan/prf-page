@@ -1,5 +1,11 @@
 # prf-page
 
+## 0.1.0
+
+### Minor Changes
+
+- 1445e45: finished first stage
+
 ## 0.0.7
 
 ### Patch Changes
