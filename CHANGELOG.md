@@ -1,5 +1,11 @@
 # prf-page
 
+## 1.0.0
+
+### Major Changes
+
+- c3eba7f: first version
+
 ## 0.1.1
 
 ### Patch Changes
