@@ -1,5 +1,12 @@
 # prf-page
 
+## 0.0.7
+
+### Patch Changes
+
+- 48a69be: images import fix
+- 12e907c: minor fix
+
 ## 0.0.6
 
 ### Patch Changes
