@@ -1,5 +1,11 @@
 # prf-page
 
+## 0.0.6
+
+### Patch Changes
+
+- 59da26f: avatar fix
+
 ## 0.0.5
 
 ### Patch Changes
