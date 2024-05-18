@@ -1,5 +1,11 @@
 # prf-page
 
+## 1.1.1
+
+### Patch Changes
+
+- a6bfb12: minor fix
+
 ## 1.1.0
 
 ### Minor Changes
