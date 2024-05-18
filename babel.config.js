@@ -39,7 +39,7 @@ module.exports = (api) => {
   return {
     presets,
     plugins,
-    exclude: ['./dist', /node_modules\/(?!@medable\/).*/],
+    exclude: ['./dist'],
     env: {
       lib: {
         ignore: [/\.stories\./, /\.test\./],

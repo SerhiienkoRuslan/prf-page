@@ -1,6 +1,6 @@
 import styles from './DropdownBox.module.scss'
-import Marker_light from '../../assets/marker-light.svg'
-import Marker_dark from '../../assets/marker-dark.svg'
+import Marker_light from '@/../assets/marker-light.svg'
+import Marker_dark from '@/../assets/marker-dark.svg'
 import { GlobalContext } from '../../context/GlobalContext'
 import { useContext, useState } from 'react'
 import useTheme from '../../hooks/useTheme'

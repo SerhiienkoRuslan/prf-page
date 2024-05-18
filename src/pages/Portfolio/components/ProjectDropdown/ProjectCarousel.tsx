@@ -59,7 +59,7 @@ const ProjectCarousel: FC<ProjectCarouselType> = ({ gallery, name }) => {
           >
             <img
               className='carouselImage'
-              src={require(`../../../../assets/projectsImg/${galleryUrl}`)}
+              src={require(`@/../assets/projectsImg/${galleryUrl}`)}
               alt='Project img'
             />
           </div>

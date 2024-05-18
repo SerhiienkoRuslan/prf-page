@@ -6,10 +6,10 @@ import useTheme from '@/hooks/useTheme'
 
 import styles from './GalleryModal.module.scss'
 
-import arrowLeft from '../../assets/arrow-left.svg'
-import arrowRight from '../../assets/arrow-right.svg'
-import arrowLeftLight from '../../assets/arrow-left-light.svg'
-import arrowRightLight from '../../assets/arrow-right-light.svg'
+import arrowLeft from '@/../assets/arrow-left.svg'
+import arrowRight from '@/../assets/arrow-right.svg'
+import arrowLeftLight from '@/../assets/arrow-left-light.svg'
+import arrowRightLight from '@/../assets/arrow-right-light.svg'
 
 interface GalleryModalProps {
   name: string
@@ -70,7 +70,7 @@ const GalleryModal = ({ name, modalUrl, setModalUrl, gallery }: GalleryModalProp
           </div>
 
           <div className={styles.image}>
-            <img src={require(`../../assets/projectsImg/${modalUrl}`)} alt='Project img' />
+            <img src={require(`@/../assets/projectsImg/${modalUrl}`)} alt='Project img' />
           </div>
         </div>
 

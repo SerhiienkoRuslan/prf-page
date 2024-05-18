@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next'
 
 import { GlobalContext } from '../../../../context/GlobalContext'
 import useTheme from '../../../../hooks/useTheme'
-import GitButton_light from '../../../../assets/gitButton-light.svg'
-import GitButton_dark from '../../../../assets/gitButton-dark.svg'
+import GitButton_light from '@/../assets/gitButton-light.svg'
+import GitButton_dark from '@/../assets/gitButton-dark.svg'
 import DropdownBox from '../../../../components/DropdownBox/DropdownBox'
 
 import ProjectCarousel from './ProjectCarousel'
