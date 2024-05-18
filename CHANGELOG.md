@@ -1,5 +1,11 @@
 # prf-page
 
+## 1.0.4
+
+### Patch Changes
+
+- 7973df1: gallery fix
+
 ## 1.0.3
 
 ### Patch Changes
