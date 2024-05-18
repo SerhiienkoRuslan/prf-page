@@ -1,5 +1,11 @@
 # prf-page
 
+## 0.1.1
+
+### Patch Changes
+
+- d493e6d: images fix
+
 ## 0.1.0
 
 ### Minor Changes
